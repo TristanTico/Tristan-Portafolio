@@ -1,0 +1,123 @@
+import { FiExternalLink } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { RevealOnScroll } from "../RevealOnScroll";
+import SISTEMA_EXPERTO from "../../assets/images/sistemaExperto.png"
+import SGT from "../../assets/images/SGT.PNG"
+import SGI from "../../assets/images/SGI.PNG"
+import PORTAFOLIO from "../../assets/images/portafolio.PNG"
+
+export const Projects = () => {
+  const projects = [
+    {
+      id: 1,
+      title: "Procedure Management System",
+      description:
+        "A full-featured online shopping platform with cart management and secure checkout process",
+      technologies: ["React", "Material UI", "Node.js", "Express", "MySQL", "Sequilize", "JWT"],
+      image:
+      SGT,
+    },
+    {
+      id: 2,
+      title: "Incident Management System",
+      description:
+        "Collaborative task management solution with real-time updates and team features",
+      technologies: ["React", "Ionic", "Node.js", "Express", "MySQL", "Prisma", "JWT"],
+      image:
+        SGI,
+    },
+    {
+      id: 3,
+      title: "Tourist Recommendation System",
+      description:
+        "Analytics and management dashboard for social media performance tracking",
+      technologies: ["Laravel", "Bootstrap", "MySQL"],
+      image:
+      SISTEMA_EXPERTO,
+    },
+    {
+      id: 4,
+      title: "AI Image Generator",
+      description:
+        "Deep learning powered image generation tool with customizable parameters",
+      technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
+      image:
+        PORTAFOLIO,
+    },
+  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+  return (
+    <section
+      id="projects"
+      className="min-h-screen flex items-center justify-center py-20"
+    >
+      <RevealOnScroll>
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+            Projects
+          </h2>
+          <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className="group backdrop-blur-lg bg-white/10 rounded-xl p-6 hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-blue-500 hover:shadow-2xl hover:shadow-blue-500/20"
+            >
+              <div className="aspect-video mb-6 overflow-hidden rounded-lg">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {project.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="px-3 py-1 text-sm rounded-full bg-blue-500/20 text-blue-400 hover:bg-blue-500/30 transition-colors duration-200"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              <button className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors duration-200">
+                View Code <FiExternalLink className="text-lg" />
+              </button>
+            </motion.div>
+          ))}
+        </motion.div>
+        </div>
+      </RevealOnScroll>
+    </section>
+  );
+};
