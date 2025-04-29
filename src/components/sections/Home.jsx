@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import CV_SPANISH from "../../assets/Hoja de vida - Tristan Lopez.pdf";
+import CV_SPANISH from "../../assets/Hoja_de_vida_Tristan Lopez.pdf";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
