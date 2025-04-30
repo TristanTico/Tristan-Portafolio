@@ -10,10 +10,9 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title:
-        "Procedure Management System",
+      title: "Procedure Management System",
       description:
-        "A full-featured online shopping platform with cart management and secure checkout process",
+        "The system digitizes processes, enabling creation, assignment to reviewers, and approval or rejection. It supports process re-entry for corrections, automatic assignment based on workload, and document uploads. It also provides visualizations of process data, response times, and user performance, with secure login for authorized access.",
       technologies: [
         "React",
         "Material UI",
