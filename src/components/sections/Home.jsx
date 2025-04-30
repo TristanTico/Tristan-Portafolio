@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import CV_SPANISH from "../../assets/Hoja_de_Vida_Tristan_Lopez.pdf";
+import CV_SPANISH from "../../assets/CV-SPANISH-TRISTAN.pdf";
+import CV_ENGLISH from "../../assets/CV-ENGLISH-TRISTAN.pdf";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
@@ -69,7 +70,7 @@ export const Home = () => {
                     Spanish
                   </a>
                   <a
-                    href="/cv-english.pdf"
+                    href={CV_ENGLISH}
                     download
                     onClick={closeDropdown}
                     className="block px-4 py-2 text-blue-500 hover:bg-blue-50 text-sm"
