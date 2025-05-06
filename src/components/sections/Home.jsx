@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { RevealOnScroll } from "../RevealOnScroll";
-import CV_SPANISH from "../../assets/EnglishCV.pdf";
-import CV_ENGLISH from "../../assets/EspañolCV.pdf";
+import CV_ENGLISH from "../../assets/EnglishCV.pdf";
+import CV_SPANISH from "../../assets/EspañolCV.pdf";
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
