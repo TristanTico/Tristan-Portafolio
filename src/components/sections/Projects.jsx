@@ -5,6 +5,7 @@ import SISTEMA_EXPERTO from "../../assets/images/sistemaExperto.png";
 import SGT from "../../assets/images/SGT.PNG";
 import SGI from "../../assets/images/SGI.PNG";
 import PORTAFOLIO from "../../assets/images/portafolio.PNG";
+import TIENDA from "../../assets/images/Tienda.PNG";
 
 export const Projects = () => {
   const projects = [
@@ -58,6 +59,26 @@ export const Projects = () => {
       technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
       image: PORTAFOLIO,
       repoLink: "https://github.com/TristanTico/Tristan-Portafolio",
+    },
+    {
+      id: 5,
+      title: "TicoTechnologys",
+      description:
+        "An online store was developed with a category and subcategory system to facilitate navigation. Users could register, browse products, add items to the cart, place orders, and track their purchases from their profile.",
+      technologies: [
+        "React",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Zustand",
+        "TypeScript",
+        "Node.js",
+        "NestJS",
+        "MySQL",
+        "Sequilize",
+        "JWT",
+      ],
+      image: TIENDA,
+      repoLink: "https://github.com/TristanTico/TicoTechnology",
     },
   ];
   const containerVariants = {
