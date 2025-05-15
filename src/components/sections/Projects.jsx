@@ -44,24 +44,6 @@ export const Projects = () => {
     },
     {
       id: 3,
-      title: "Tourist Recommendation System",
-      description:
-        "A web app designed to help you discover top tourist destinations whether you're into paradise beaches, vibrant cities, or stunning mountains. It offers personalized travel recommendations based on detailed data and user reviews.",
-      technologies: ["Laravel", "Bootstrap", "MySQL"],
-      image: SISTEMA_EXPERTO,
-      repoLink: "https://github.com/TristanTico/sistemaExpertoRecomendaciones",
-    },
-    {
-      id: 4,
-      title: "Web Portfolio",
-      description:
-        "Personal portfolio, an interactive and visual showcase of my skills, projects, and experience.",
-      technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
-      image: PORTAFOLIO,
-      repoLink: "https://github.com/TristanTico/Tristan-Portafolio",
-    },
-    {
-      id: 5,
       title: "TicoTechnologys",
       description:
         "An online store was developed with a category and subcategory system to facilitate navigation. Users could register, browse products, add items to the cart, place orders, and track their purchases from their profile.",
@@ -80,6 +62,25 @@ export const Projects = () => {
       image: TIENDA,
       repoLink: "https://github.com/TristanTico/TicoTechnology",
     },
+    {
+      id: 4,
+      title: "Tourist Recommendation System",
+      description:
+        "A web app designed to help you discover top tourist destinations whether you're into paradise beaches, vibrant cities, or stunning mountains. It offers personalized travel recommendations based on detailed data and user reviews.",
+      technologies: ["Laravel", "Bootstrap", "MySQL"],
+      image: SISTEMA_EXPERTO,
+      repoLink: "https://github.com/TristanTico/sistemaExpertoRecomendaciones",
+    },
+    {
+      id: 5,
+      title: "Web Portfolio",
+      description:
+        "Personal portfolio, an interactive and visual showcase of my skills, projects, and experience.",
+      technologies: ["React", "Tailwind CSS", "EmailJS", "Framer Motion"],
+      image: PORTAFOLIO,
+      repoLink: "https://github.com/TristanTico/Tristan-Portafolio",
+    },
+    
   ];
   const containerVariants = {
     hidden: { opacity: 0 },
