@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
     <div
@@ -19,8 +21,8 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
         &times;
       </button>
 
-      <a
-        href="#home"
+      <Link
+        to="home"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
                     ${
@@ -29,42 +31,54 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                         : "opacity-0 translate-y-5"
                     }        
             `}
+        smooth={true}
+        duration={800}
+        offset={-80}
       >
         Home
-      </a>
-      <a
-        href="#about"
+      </Link>
+      <Link
+        to="about"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }        
     `}
+        smooth={true}
+        duration={800}
+        offset={-80}
       >
         About
-      </a>
-      <a
-        href="#projects"
+      </Link>
+      <Link
+        to="projects"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }        
     `}
+        smooth={true}
+        duration={800}
+        offset={-80}
       >
         Projects
-      </a>
-      <a
-        href="#contact"
+      </Link>
+      <Link
+        to="contact"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
             ${
               menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
             }        
     `}
+        smooth={true}
+        duration={800}
+        offset={-80}
       >
         Contact
-      </a>
+      </Link>
     </div>
   );
 };
